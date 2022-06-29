@@ -23,6 +23,9 @@ const app = Vue.createApp({
                 this.caption = 'Show List'
             }
             console.log('flag2')
+        },
+        removeGoal(index) {
+            this.goals.splice(index,1)
         }
     }
 

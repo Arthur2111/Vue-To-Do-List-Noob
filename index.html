@@ -24,8 +24,8 @@
       <button @click="inputGoals">Add Task</button>
       <ul v-show="visible">
         <!-- 2) Output the list of tasks here -->
-        <!-- we will use v-for to render the list of goals  -->
-        <li v-for="goal in goals" :key="goal">
+        <!-- we will use v-for to render the list of goals, we need to refer to create an index element in v-for if we want to reference it  -->
+        <li @click="removeGoal(index)" v-for="(goal,index) in goals" :key="goal">
           {{goal}}
         </li>
       </ul>
